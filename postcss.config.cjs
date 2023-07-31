@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const postcssImport = require("postcss-import");
 const nesting = require("tailwindcss/nesting");
 const tailwind = require("tailwindcss");

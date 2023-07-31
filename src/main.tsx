@@ -1,5 +1,15 @@
-import { render } from "preact";
-import { App } from "./app";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./styles/global.css";
+import { RouterProvider } from "@tanstack/router";
+import { router } from "./routes.tsx";
 
-render(<App />, document.getElementById("app")!);
+const rootElement = document.getElementById("root")!;
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
+}
