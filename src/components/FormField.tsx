@@ -3,9 +3,7 @@ import { FC, ReactNode } from "react";
 export const FormFieldContainer: FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  return (
-    <label className="flex flex-col max-w-sm text-neutral">{children}</label>
-  );
+  return <label className="flex flex-col max-w-sm text-main">{children}</label>;
 };
 
 export const FormFieldLabel: FC<{ children: ReactNode }> = ({ children }) => {
