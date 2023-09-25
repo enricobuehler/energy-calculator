@@ -4,6 +4,10 @@ import FormField from "@/components/FormField";
 import NumberInput from "@/components/NumberInput";
 import Form from "@/components/Form";
 
+function roundToSevenDigits(num: number) {
+  return Math.round((num + Number.EPSILON) * 10000000) / 10000000;
+}
+
 export default function PowerSplitCalculator() {
   const [unitOneKwp, setUnitOneKwp] = useState(0);
   const [unitTwoKwp, setUnitTwoKwp] = useState(0);
@@ -13,8 +17,8 @@ export default function PowerSplitCalculator() {
   );
   const powerSplit = useMemo(
     () => [
-      Math.round(unitOneKwp / unitKwpSum),
-      Math.round(unitTwoKwp / unitKwpSum),
+      roundToSevenDigits(unitOneKwp / unitKwpSum),
+      roundToSevenDigits(unitTwoKwp / unitKwpSum),
     ],
     [unitOneKwp, unitTwoKwp, unitKwpSum]
   );
@@ -38,7 +42,7 @@ export default function PowerSplitCalculator() {
       </Form>
       <p>
         Leistungsaufteilung: <br />
-        Anlage 1:{powerSplit[0]} <br />
+        Anlage 1: {powerSplit[0]} <br />
         Anlage 2: {powerSplit[1]}
       </p>
     </CalculatorContainer>
