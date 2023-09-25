@@ -3,11 +3,11 @@ import { FC, ReactNode } from "react";
 export const FormFieldContainer: FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  return <label className="flex flex-col max-w-sm text-main">{children}</label>;
+  return <label className="flex flex-col text-main">{children}</label>;
 };
 
 export const FormFieldLabel: FC<{ children: ReactNode }> = ({ children }) => {
-  return <span className="text-main">{children}</span>;
+  return <span className="text-main/75 font-normal mb-1">{children}</span>;
 };
 
 export const FormField = {

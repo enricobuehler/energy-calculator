@@ -18,8 +18,12 @@ export default function PeriodConsumptionCalculator() {
       <h2>Perioden Verbrauch</h2>
       <p>Zieht vom gegebenen Wert 10% ab für die PV</p>
       <Form>
-        <div>
+        <div className="ring-slate-600 dark:ring-slate-400 ring-2 w-full rounded-md p-2">
           <h3>Optional</h3>
+          <p className="text-main/50">
+            Falls der Verbrauch nicht über einen Zeitraum von 365 Tagen
+            angegeben ist kann er hier berechnet werden.
+          </p>
           <FormField.Container>
             <FormField.Label>Verbrauch</FormField.Label>
             <NumberInput onChange={(v) => setLastPeriodUsage(v)} />

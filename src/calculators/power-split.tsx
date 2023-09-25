@@ -42,8 +42,8 @@ export default function PowerSplitCalculator() {
       </Form>
       <p>
         Leistungsaufteilung: <br />
-        Anlage 1: {powerSplit[0]} <br />
-        Anlage 2: {powerSplit[1]}
+        Anlage 1: {powerSplit[0].toString().replace(",", ".")} <br />
+        Anlage 2: {powerSplit[1].toString().replace(",", ".")}
       </p>
     </CalculatorContainer>
   );

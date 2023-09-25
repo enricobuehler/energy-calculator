@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@custom-media --sm-viewport screen and (min-width: 640px);
+@custom-media --md-viewport screen and (min-width: 768px);
+@custom-media --lg-viewport screen and (min-width: 1024px);
+@custom-media --xl-viewport screen and (min-width: 1280px);
+@custom-media --2xl-viewport screen and (min-width: 1536px);
+
 
 :root {
   --color-main: 0 0% 0%;
@@ -20,6 +26,7 @@
   --gap-card: 1rem;
 
   --max-width-section: 100%;
+  --max-width-form: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,7 +52,9 @@ code {
 }
 
 input {
+  @apply p-2 ring-2 rounded-md focus:ring-slate-800 ring-slate-600 dark:ring-slate-400 dark:focus:ring-slate-200 mb-2 transition-colors;
   background: transparent;
+
 }
 
 h1 {
@@ -55,6 +64,7 @@ h1 {
 @media (--lg-viewport) {
   :root {
     --max-width-section: 1000px;
+    --max-width-form: 500px;
   }
 }
 
