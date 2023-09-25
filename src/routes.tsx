@@ -5,6 +5,7 @@ import {
   guessConsumptionCalculatorRoute,
   periodConsumptionCalculatorRoute,
   photovoltaicPeriodSupplyCalculatorRoute,
+  powerSplitCalculatorRoute,
 } from "./calculators/routes";
 import CalculatorsOverview from "./calculators/overview";
 
@@ -24,6 +25,7 @@ const routeTree = rootRoute.addChildren([
   photovoltaicPeriodSupplyCalculatorRoute,
   periodConsumptionCalculatorRoute,
   consumptionFactorCalculatorRoute,
+  powerSplitCalculatorRoute,
 ]);
 
 export const router = new Router({ routeTree });

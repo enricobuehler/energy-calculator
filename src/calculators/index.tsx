@@ -3,6 +3,7 @@ import PeriodConsumptionCalculator from "./period-consumption";
 import GuessConsumptionCalculator from "./guess-consumption";
 import { CalculatorType } from "./common";
 import PhotovoltaicPeriodSupplyCalculator from "./photovoltaic-period-supply";
+import PowerSplitCalculator from "./power-split";
 
 export default function Calculators({
   activeCalculator,
@@ -18,6 +19,8 @@ export default function Calculators({
       return <GuessConsumptionCalculator />;
     case CalculatorType.PhotovoltaicPeriodSupply:
       return <PhotovoltaicPeriodSupplyCalculator />;
+    case CalculatorType.PowerSplit:
+      return <PowerSplitCalculator />;
     default:
       return null;
   }

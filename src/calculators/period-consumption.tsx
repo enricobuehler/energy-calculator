@@ -9,7 +9,7 @@ export default function PeriodConsumptionCalculator() {
   const [lastPeriodUsage, setLastPeriodUsage] = useState(0);
   const [lastPeriodDurationDays, setLastPeriodDurationDays] = useState(0);
   const lastPeriodYearlyUsage = useMemo(
-    () => Math.round(lastPeriodUsage / lastPeriodDurationDays) * 365,
+    () => Math.round((lastPeriodUsage / lastPeriodDurationDays) * 365),
     [lastPeriodUsage, lastPeriodDurationDays]
   );
 
