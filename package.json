@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",
+    "@tanstack/react-router": "beta",
     "@tanstack/router": "^0.0.1-beta.127",
     "@ts-react/form": "^1.8.2",
     "class-variance-authority": "^0.7.0",

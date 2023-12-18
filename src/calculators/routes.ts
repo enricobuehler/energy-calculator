@@ -1,6 +1,6 @@
 import { rootRoute } from "@/routes";
 import GuessConsumptionCalculator from "./guess-consumption";
-import { Route } from "@tanstack/router";
+import { Route } from "@tanstack/react-router";
 import PhotovoltaicPeriodSupplyCalculator from "./photovoltaic-period-supply";
 import PeriodConsumptionCalculator from "./period-consumption";
 import ConsumptionFactorCalculator from "./consumption-factor";

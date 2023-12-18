@@ -1,4 +1,4 @@
-import { RootRoute, Route, Router } from "@tanstack/router";
+import { RootRoute, Route, Router } from "@tanstack/react-router";
 import Root from "./root";
 import {
   consumptionFactorCalculatorRoute,
@@ -30,7 +30,7 @@ const routeTree = rootRoute.addChildren([
 
 export const router = new Router({ routeTree });
 
-declare module "@tanstack/router" {
+declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router;
   }

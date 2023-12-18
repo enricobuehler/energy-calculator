@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/global.css";
-import { RouterProvider } from "@tanstack/router";
+import { RouterProvider } from "@tanstack/react-router";
 import { router } from "./routes.tsx";
 
 const rootElement = document.getElementById("root")!;
