@@ -5,3 +5,11 @@ export enum CalculatorType {
   GuessConsumption = "GuessConsumption",
   PowerSplit = "PowerSplit",
 }
+
+export const CalculatorTypeLocale: Record<CalculatorType, string> = {
+  ConsumptionFactor: "Verbrauchsfaktor",
+  PhotovoltaicPeriodSupply: "PV Perioden Einspeisung",
+  PeriodConsumption: "Perioden Verbrauch",
+  GuessConsumption: "Geschätzter Verbrauch",
+  PowerSplit: "Leistungsaufteilung",
+};
